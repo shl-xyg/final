@@ -1,0 +1,30 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Local planning notes are useful during development but should not be
+# published as part of the assignment repository.
+_plans/
+
+# Large/generated experiment artifacts.
+outputs/
+wandb/
+weights/*.tar.gz
+weights/*.zip
+dist/
+external/
+
+# Tectonic/LaTeX build noise.
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.log
+*.out
+*.run.xml
+*.toc
+*.synctex.gz

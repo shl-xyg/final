@@ -1,0 +1,96 @@
+{
+  "complete": true,
+  "hyperparameters": {
+    "batch_size": 128,
+    "chunk_size": 10,
+    "dataset_format": "hf_parquet",
+    "dim_feedforward": 3200,
+    "dim_model": 512,
+    "image_size": 224,
+    "kl_weight": 10.0,
+    "language_conditioning": true,
+    "language_embedding_backend": "calvin_sbert",
+    "language_embedding_dim": 384,
+    "loss_function": "Action L1 reconstruction + KL regularization",
+    "lr": 1e-05,
+    "n_action_steps": 1,
+    "n_decoder_layers": 1,
+    "n_encoder_layers": 4,
+    "n_heads": 8,
+    "optimizer": "AdamW",
+    "steps": "88000 effective stop; command cap 100000",
+    "weight_decay": 0.0001
+  },
+  "packages": [
+    {
+      "file": "weights/act_lang_a_only_100k_b128_v1_best.tar.gz",
+      "sha256": "950fbb402a3ba4a277c4b459a9d60fcb6c7cb7d3233b92d61f1e45dc588377b8"
+    },
+    {
+      "file": "weights/act_lang_abc_joint_100k_b128_v1_best.tar.gz",
+      "sha256": "8258442e1377cefa4f1fb9a84e6e2edecc5a642a759a1609ff539d35e71f8970"
+    }
+  ],
+  "runs": [
+    {
+      "best_step": 88000,
+      "best_train_val_l1": 0.052623151685111225,
+      "complete": true,
+      "d_offline_kld": 3.6030251067131758e-06,
+      "d_offline_l1": 0.13668560306541622,
+      "d_offline_loss": 0.13672163267619908,
+      "final_train_l1": 0.05365189164876938,
+      "final_train_loss": 0.053686562925577164,
+      "final_validation_l1": 0.052623151685111225,
+      "final_validation_loss": 0.05265938211232424,
+      "label": "ACT_Lang_A_only_88k_b128_TE",
+      "language": "yes",
+      "rollout_1_task_sr": 0.22,
+      "rollout_avg_seq_len": 0.32,
+      "rollout_file": "rollout_D_success_temporal_ens.json",
+      "rollout_num_sequences": 50,
+      "run_name": "act_lang_a_only_100k_b128_v1",
+      "temporal_ensemble_coeff": 0.01,
+      "train_envs": "A",
+      "train_validation_envs": "A"
+    },
+    {
+      "best_step": 88000,
+      "best_train_val_l1": 0.07341443956829607,
+      "complete": true,
+      "d_offline_kld": 2.8225258574821055e-06,
+      "d_offline_l1": 0.11489613098092377,
+      "d_offline_loss": 0.11492435657419264,
+      "final_train_l1": 0.07924545556306839,
+      "final_train_loss": 0.07928185164928436,
+      "final_validation_l1": 0.07341443956829607,
+      "final_validation_loss": 0.07344313454814255,
+      "label": "ACT_Lang_ABC_joint_88k_b128_TE",
+      "language": "yes",
+      "rollout_1_task_sr": 0.38,
+      "rollout_avg_seq_len": 0.56,
+      "rollout_file": "rollout_D_success_temporal_ens.json",
+      "rollout_num_sequences": 50,
+      "run_name": "act_lang_abc_joint_100k_b128_v1",
+      "temporal_ensemble_coeff": 0.01,
+      "train_envs": "A,B,C",
+      "train_validation_envs": "A,B,C"
+    }
+  ],
+  "success_comparison": [
+    {
+      "avg_len": 0.32,
+      "model": "ACT+Lang A 88k b128 TE",
+      "run_name": "act_lang_a_only_100k_b128_v1",
+      "split": "A->D",
+      "sr1_percent": 22.0
+    },
+    {
+      "avg_len": 0.56,
+      "model": "ACT+Lang ABC 88k b128 TE",
+      "run_name": "act_lang_abc_joint_100k_b128_v1",
+      "split": "ABC->D",
+      "sr1_percent": 38.0
+    }
+  ]
+}

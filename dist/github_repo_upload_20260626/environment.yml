@@ -1,0 +1,29 @@
+name: act-calvin-lerobot
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.13
+  - pytorch
+  - torchvision
+  - pytorch-cuda=12.8
+  - numpy
+  - pillow
+  - pandas
+  - matplotlib
+  - tqdm
+  - pyyaml
+  - safetensors
+  - pyarrow
+  - pip
+  - pip:
+      - "lerobot>=0.5.2"
+      - "wandb>=0.26"
+      - "huggingface-hub>=0.30"
+      - "gym==0.26.2"
+      - "pybullet>=3.2.7"
+      - "pytorch-lightning>=2.6"
+      - "numpy-quaternion>=2024.0.13"
+      - "timm>=1.0"
+      - "einops-exts>=0.0.4"

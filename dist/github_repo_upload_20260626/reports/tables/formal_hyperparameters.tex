@@ -1,0 +1,25 @@
+\begin{tabular}{ll}
+\toprule
+Item & Value \\
+\midrule
+dataset\_format & hf\_parquet \\
+chunk\_size & 10 \\
+image\_size & 224 \\
+dim\_model & 512 \\
+n\_heads & 8 \\
+dim\_feedforward & 3200 \\
+n\_encoder\_layers & 4 \\
+n\_decoder\_layers & 1 \\
+n\_action\_steps & 1 \\
+batch\_size & 128 \\
+lr & 1e-05 \\
+weight\_decay & 0.0001 \\
+kl\_weight & 10 \\
+language\_conditioning & True \\
+language\_embedding\_backend & calvin\_sbert \\
+language\_embedding\_dim & 384 \\
+steps & 88000 effective stop; command cap 100000 \\
+optimizer & AdamW \\
+loss\_function & Action L1 reconstruction + KL regularization \\
+\bottomrule
+\end{tabular}

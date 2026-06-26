@@ -1,0 +1,38 @@
+# ========== 模型权重与大文件 ==========
+*.pth
+*.pt
+*.ckpt
+*.bin
+*.onnx
+*.safetensors
+*.h5
+*.pkl
+*.pickle
+checkpoints/
+pretrained_models/
+model_weights/
+outputs/
+logs/
+
+# ========== Python 缓存与虚拟环境 ==========
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+.venv/
+env/
+
+# ========== IDE 与系统文件 ==========
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.ipynb_checkpoints/
+
+# ========== 数据集（通常也不应上传）==========
+data/
+dataset/
+*.csv
+*.jsonl
+*.parquet
