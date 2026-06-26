@@ -53,3 +53,6 @@ weights/
 
 # reports/report.pdf
 # dist/*/reports/report.pdf
+*.tar.gz
+dist/*.tar.gz
+dist/model_weights*/
