@@ -1,2 +1,0 @@
-950fbb402a3ba4a277c4b459a9d60fcb6c7cb7d3233b92d61f1e45dc588377b8  act_lang_a_only_100k_b128_v1_best.tar.gz
-8258442e1377cefa4f1fb9a84e6e2edecc5a642a759a1609ff539d35e71f8970  act_lang_abc_joint_100k_b128_v1_best.tar.gz

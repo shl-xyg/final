@@ -36,3 +36,20 @@ dataset/
 *.csv
 *.jsonl
 *.parquet
+# ========== 交付物压缩包与模型权重 ==========
+*.tar.gz
+*.zip
+*.rar
+*.7z
+dist/*.tar.gz
+dist/model_weights_*/
+weights/
+*.pth
+*.pt
+*.ckpt
+*.bin
+*.onnx
+*.safetensors
+
+# reports/report.pdf
+# dist/*/reports/report.pdf
